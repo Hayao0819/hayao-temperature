@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  couch:
+    image: couchdb:latest
+    ports:
+      - 5984:5984
+    environment:
+      - COUCHDB_USER=dbadmin
+      - COUCHDB_PASSWORD=123456
+    volumes:
+      - ./couchdata:/opt/couchdb/data
